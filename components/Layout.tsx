@@ -19,7 +19,7 @@ const Layout: FC<LayoutProps> = ({ children, title = 'Massaal blog' }) => (
                 name="description"
                 content="Web development blog for Massaal"
             />
-            <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+            <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         </Head>
         <div className="text-center pt-3 mb-8 md:pb-8 text-5xl md:text-7xl font-bold tracking-tighter leading-tight">
             Massaal

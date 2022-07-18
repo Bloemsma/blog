@@ -11,6 +11,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import Layout from '../../components/Layout';
 import { getAllPosts, getPostBySlug } from '../../lib/api';
 import Link from 'next/link';
+import CoverImage from '../../components/CoverImage';
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
     const { slug } = params as { slug: string };
@@ -84,6 +85,9 @@ const PostPage: NextPage<PostPageProps> = ({ post, morePosts, preview }) => {
                 </Link>
 
                 <h1 className="pt-4">{post.title}</h1>
+                <div className="mb-8 md:mb-16 sm:mx-0">
+                    <CoverImage title={post.title} src={post.coverImage} />
+                </div>
                 <MDXRemote {...post.content} components={{ Image }} />
             </div>
         </Layout>
